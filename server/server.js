@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 // Required routes
 const pokemonApi = require('./routes/pokemonAPI');
 
-// body parser
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
