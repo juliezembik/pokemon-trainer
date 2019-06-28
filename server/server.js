@@ -2,17 +2,16 @@ const express = require('express');
 require('dotenv').config();
 
 const app = express();
-const bodyParser = require('body-parser');
 
 // Required routes
-const pokemonApi = require('./routes/pokemonAPI');
+const pokedexApi = require('./routes/pokedexApi');
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use('/api/pokemonApi', pokemonApi);
+app.use('/api/pokedexApi', pokedexApi);
 
 //serve static files
 app.use(express.static('build'));
